@@ -9,7 +9,7 @@
     <artifactId>helidon-samples-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  
+
   <groupId>poc.mp.user</groupId>
   <artifactId>user</artifactId>
   <version>1.0-SNAPSHOT</version>
@@ -116,8 +116,8 @@
               <outputDirectory>${project.build.directory}</outputDirectory>
               <resources>
                 <resource>
-                  <directory>src/main/docker</directory>
                   <filtering>true</filtering>
+                  <directory>src/main/docker</directory>
                   <includes>
                     <include>Dockerfile</include>
                   </includes>
