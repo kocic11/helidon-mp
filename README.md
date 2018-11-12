@@ -67,7 +67,7 @@ curl -i -X POST \
 ```
 7.	Build and start the services
 ```
-mvn package
+mvn package -DskipTests
 docker build -t user-mp target
 docker build -t account-mp target
 docker run --rm -p 8090:8090 --name user --network kong-net user-mp:latest
