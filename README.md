@@ -68,10 +68,10 @@ curl -i -X POST \
 7.	Build and start the services
 ```
 mvn package -DskipTests
-docker build -t user-mp target
-docker build -t account-mp target
-docker run --rm -p 8090:8090 --name user --network kong-net user-mp:latest
-docker run --rm -p 8090:8090 --name account --network kong-net account-mp:latest
+docker build -t user-mp user/target
+docker build -t account-mp account/target
+docker run -d -p 8090:8090 --name user --network kong-net user-mp:latest
+docker run -d -p 8090:8090 --name account --network kong-net account-mp:latest
 ```
 8.	Forward the requests through Kong
 ```
